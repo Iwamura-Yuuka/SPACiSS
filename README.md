@@ -63,6 +63,7 @@ cd Spaciss
 git submodule update --init --recursive
 cd ../..
 sudo apt-get install ros-noetic-pcl-ros
+sudo apt install python-is-python3       # for pedsim_gazebo_plugin
 
 catkin_make or catkin build (twice at the first time)
 ```
