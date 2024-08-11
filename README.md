@@ -5,12 +5,12 @@ Simulation of Pedestrians and an Autonomous Car in Shared Spaces
 
 [![DOI](https://zenodo.org/badge/308359391.svg)](https://zenodo.org/badge/latestdoi/308359391)
 
-The implementation is based on [Pedsim_ros](https://github.com/srl-freiburg/pedsim_ros), ROS packages that wrap a crowd simulator based on Christian Gloor's [libpedsim](http://pedsim.silmaril.org/) library.
+The implementation is based on [Pedsim_ros](https://github.com/srl-freiburg/pedsim_ros), ROS packages that wrap a crowd simulator based on Christian Gloor's [libpedsim](http://pedsim.silmaril.org/) library.  
 The pedestrian model is based on the social force model of [Helbing et. al](http://arxiv.org/pdf/cond-mat/9805244.pdf).
 
-This package is useful to support Autonomous vehicle (AV) developments that require the simulation of pedestrians and an AV in various shared spaces scenarios.
-It allows:
-&nbsp;&nbsp;&nbsp;1. in simulation, to pre-test AV navigation algorithms in various crowd scenarios,
+This package is useful to support Autonomous vehicle (AV) developments that require the simulation of pedestrians and an AV in various shared spaces scenarios.  
+It allows:  
+&nbsp;&nbsp;&nbsp;1. in simulation, to pre-test AV navigation algorithms in various crowd scenarios,  
 &nbsp;&nbsp;&nbsp;2. in real crowds, to help online prediction of pedestrian trajectories around the AV.
 
 <br/>
@@ -57,12 +57,11 @@ Requires:
 
 ### Install commands
 ```
-cd <your path to>/catkin_ws/src
-git clone https://github.com/Iwamura-Yuuka/SPACiSS.git
+cd [workspace]/src
+git clone https://github.com/Iwamura-Yuuka/SPACiSS.git  
 cd Spaciss
 git submodule update --init --recursive
-cd <your path to>/catkin_ws
-rosdep install -i -r -y --from-paths src
+cd ../..
 sudo apt-get install ros-noetic-pcl-ros
 sudo apt install python-is-python3       # for pedsim_gazebo_plugin
 
@@ -74,9 +73,9 @@ catkin_make or catkin build (twice at the first time)
 ```
 roslaunch experimental_package business_area.launch
 ```
-The previous command should start the simulator with the business area environment and the shared space scenario (many pedestrians and an AV).
-More launch files are in the `experimental_package/launch` repository.
-Ready to test scenarios are in the `experimental_package/scenarios` repository.
+The previous command should start the simulator with the business area environment and the shared space scenario (many pedestrians and an AV).  
+More launch files are in the `experimental_package/launch` repository.  
+Ready to test scenarios are in the `experimental_package/scenarios` repository.  
 
 ### Only Pedestrian data
 ```
@@ -87,7 +86,7 @@ roslaunch experimental_package human_data_only.launch
 ```
 roslaunch pedsim_gazebo_plugin scene1.launch
 ```
-The previous command should start the simulator and Gazebo with some pedestrians.
+The previous command should start the simulator and Gazebo with some pedestrians. 
 
 
 ### Parallel execution of multiple nodes
@@ -95,7 +94,7 @@ The previous command should start the simulator and Gazebo with some pedestrians
 ```
 roslaunch experimental_package multi_node_parallel.launch
 ```
-The previous command starts 2 simulations with the business area environment and the shared space scenario, with AV max speed of 2m/s and 4m/s respectively.
+The previous command starts 2 simulations with the business area environment and the shared space scenario, with AV max speed of 2m/s and 4m/s respectively.  
 
 
 <br/>
@@ -119,7 +118,7 @@ rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped '{header: {stamp: 
 
 ### Mode 2: with the social force model
 
-The AV in the simulator is controlled by the social force model, like for pedestrians.
+The AV in the simulator is controlled by the social force model, like for pedestrians.  
 For now, the social force is configured to have the AV go straight to its destination, trying to avoid walls but not pedestrians.
 
 <br/>
@@ -128,7 +127,7 @@ For now, the social force is configured to have the AV go straight to its destin
 
 * <b> simulator node</b>
 * visualizer node + rviz node
-* sensor node
+* sensor node 
 * robot controller node and move_base node
 * timer node to shutdown all nodes after a timelapse
 
@@ -265,7 +264,7 @@ Manon Prédhumeau. 2021. Simulating Realistic Pedestrian Behaviors in the Contex
 Manon Prédhumeau. 2021. Modélisation et simulation de comportements piétons réalistes en espace partagé avec un véhicule autonome. Université Grenoble Alpes. Français. [tel-03518751](https://hal.archives-ouvertes.fr/tel-03518751)
 
 ## License
-The core `libpedsim` is licensed under LGPL.
+The core `libpedsim` is licensed under LGPL.  
 The ROS integration and extensions are licensed under BSD.
 
 
