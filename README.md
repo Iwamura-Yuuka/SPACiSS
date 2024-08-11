@@ -57,11 +57,13 @@ Requires:
 
 ### Install commands
 ```
-cd [workspace]/src
+cd <your path to>/catkin_ws/src
 git clone https://github.com/Iwamura-Yuuka/SPACiSS.git  
 cd Spaciss
 git submodule update --init --recursive
-cd ../..
+
+cd <your path to>/catkin_ws
+rosdep install -i -r -y --from-paths src
 sudo apt-get install ros-noetic-pcl-ros
 sudo apt install python-is-python3       # for pedsim_gazebo_plugin
 
