@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 project(pedsim_simulator)
-add_definitions(-Wall -Wunused -std=c++14 -pipe -Wunused -Wextra)
+# add_definitions(-Wall -Wunused -std=c++14 -pipe -Wunused -Wextra)
+add_definitions(-Wall -Wunused -std=c++17 -pipe -Wunused -Wextra)
 
 # add_definitions(-Wall -Wunused -std=c++11 -pipe -Wshadow -Wunused -Wextra)
 set(PEDSIM_SIMULATOR_DEPENDENCIES
