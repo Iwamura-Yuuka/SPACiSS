@@ -440,8 +440,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 2.000943422317505
-        Min Value: -0.01563391089439392
+        Max Value: 2.007153034210205
+        Min Value: -0.03582867980003357
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -464,6 +464,17 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Class: rviz/PointStamped
+      Color: 204; 41; 204
+      Enabled: true
+      History Length: 1
+      Name: PointStamped
+      Queue Size: 10
+      Radius: 0.20000000298023224
+      Topic: /local_goal
+      Unreliable: false
       Value: true
   Enabled: true
   Global Options:
