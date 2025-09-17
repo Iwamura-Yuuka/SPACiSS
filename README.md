@@ -65,7 +65,9 @@ git submodule update --init --recursive
 cd <your path to>/catkin_ws
 rosdep install -i -r -y --from-paths src
 sudo apt-get install ros-noetic-pcl-ros
-sudo apt install python-is-python3       # for pedsim_gazebo_plugin
+sudo apt-get install ros-noetic-move-base
+sudo apt install python-is-python3                                             # for pedsim_gazebo_plugin
+sudo apt-get install ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control  # gazebo
 
 catkin_make or catkin build (twice at the first time)
 ```
